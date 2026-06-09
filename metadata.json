@@ -1,0 +1,8 @@
+{
+  "name": "Peekaboo Corner Regina Childcare",
+  "description": "A premium Regina-based licensed early learning center featuring high-quality care, play-based Montessori & Reggio Emilia learning, and full parent integration.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
