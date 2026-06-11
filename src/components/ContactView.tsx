@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { MapPin, Phone, Mail, Clock, Calendar, CheckCircle, ShieldCheck, Star } from "lucide-react";
 import { LanguageCode, TourBooking } from "../types";
 import { TRANSLATIONS } from "../data";
+import GoogleMapsZone from "./GoogleMapsZone";
 
 interface ContactViewProps {
   lang: LanguageCode;
@@ -131,20 +132,10 @@ export default function ContactView({ lang, onAddTour, quickBookTour, onCloseQui
             </div>
           </div>
 
-          {/* Interactive simulated maps directions */}
+          {/* Live Google Maps & Directions Integration */}
           <div className="space-y-3">
-            <h4 className="font-bold text-gray-800 text-xs">Simulated Maps & Directions</h4>
-            <div className="w-full h-44 bg-gray-100 rounded-2xl relative border border-gray-200 overflow-hidden select-none flex flex-col justify-between p-4 bg-grid-gray">
-              <div className="z-10 text-[10px] bg-white/95 px-3 py-1.5 rounded-lg font-semibold shadow-xs border text-gray-800 max-w-xs self-start">
-                🗺️ Location: 4822 Queen St, Regina (Treaty 4 Zone)
-              </div>
-              <button 
-                onClick={() => alert("Launching external Google Maps directions navigation frame!")}
-                className="z-10 self-end px-3 py-1.5 bg-[#59C7F5] text-white text-[10px] font-bold rounded-lg hover:opacity-90 cursor-pointer"
-              >
-                Navigate &rarr;
-              </button>
-            </div>
+            <h4 className="font-bold text-gray-800 text-xs uppercase text-[#FF724E] tracking-wider">Live Regina Center Map</h4>
+            <GoogleMapsZone />
           </div>
         </div>
 
